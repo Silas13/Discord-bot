@@ -1,9 +1,8 @@
 package core;
 
-import commands.shutdowncmd;
-import listener.onReady;
+import commands.Shutdowncmd;
+import listener.ReadyEvent;
 import net.dv8tion.jda.core.AccountType;
-import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
 import util.Secret;
@@ -19,8 +18,8 @@ public static void main(String[] args){
     builder.setToken(Secret.token);
     builder.setAutoReconnect(true);
     builder.setStatus(OnlineStatus.ONLINE);
-    builder.addEventListener(new onReady());
-    builder.addEventListener(new shutdowncmd());
+    builder.addEventListener(new ReadyEvent());
+    builder.addEventListener(new Shutdowncmd());
 
     try {
        builder.buildBlocking();

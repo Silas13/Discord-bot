@@ -5,7 +5,7 @@ import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import util.Prefix;
 
-public class shutdowncmd extends ListenerAdapter {
+public class Shutdowncmd extends ListenerAdapter {
 
 
     public void onGuildMessageReceived(GuildMessageReceivedEvent e) {
