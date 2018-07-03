@@ -1,18 +1,18 @@
 package listener;
 
-
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 
-public class ReadyEvent extends ListenerAdapter {
+public class ReadyListener extends ListenerAdapter {
 
 
-    public void onReady(net.dv8tion.jda.core.events.ReadyEvent e) {
+    @Override
+    public void onReady(ReadyEvent event) {
         System.out.println("Ready");
-
     }
 }
+
 
 
 
